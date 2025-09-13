@@ -1,0 +1,111 @@
+/* Reset */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Navigation (Flexbox) */
+nav ul {
+  display: flex;
+  flex-direction: column;   /* mobile-first: stack vertically */
+  align-items: center;
+  list-style: none;
+  background: #333;
+}
+
+nav ul li {
+  margin: 0.5rem 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+/* Main (Grid container) */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: auto;
+  gap: 0.75rem;
+}
+
+input, select, button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* ----------- Responsive breakpoints ----------- */
+
+/* Tablet screens */
+@media (min-width: 600px) {
+  nav ul {
+    flex-direction: row; /* nav becomes horizontal */
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 1rem;
+  }
+
+  form {
+    max-width: 500px; /* center the form nicely */
+  }
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* still single column, but can expand */
+    padding: 2rem;
+  }
+
+  form {
+    max-width: 600px;
+  }
+}
